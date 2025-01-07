@@ -8,6 +8,7 @@
     /* colors */
     --clr-violet: hsl(257, 40%, 49%);
     --clr-mag: hsl(300, 69%, 71%);
+    --clr-whit: hsl(0, 100%, 100%);
 
     /* font families */
 
@@ -19,6 +20,44 @@
     --width: 100vw;
     --height: 100vh;
     --zero: 0;
+}
+
+/* General / utilities styles*/
+
+
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-evenly {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flex-column-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+i:not(.header-container i) {
+    outline: 1px solid;
+    border-radius: 50%;
+    padding: 0.4rem;
+    font-size: 0.9rem;
 }
 
 
@@ -35,7 +74,70 @@
 /* Small screens */
 
 @media screen and (max-width: 375px){
-    
+    body {
+        min-height: var(--height);
+        min-width: var(--width);
+        background-color: var(--clr-violet);
+        background-image: url(/images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 95%;
+        font-family: var(--ff-poppins);
+        color: var(--clr-whit);
+    }
+
+    /* Outter containers */
+
+    .main-container {
+        padding: 1rem;
+        width: var(--width);
+        height: calc(var(--height) - 5vh);
+        align-items: center;
+    }
+
+    .header-container {
+        align-self: flex-start;
+        margin-left: 1rem;
+        display: flex;
+        width: 33%;
+        align-items: center;
+        padding: 0.3rem;
+    }
+
+    .illustration-container {
+        align-self: center;
+        width: 90%;
+        height: 40%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .content-container {
+        align-self: center;
+        width: 90%;
+        outline: 1px solid;
+        align-items: center;
+    }
+
+    .social-container {
+        align-self:center;
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+
+    footer a {
+        color: inherit !important;
+    }
+
+
 }
 
 
