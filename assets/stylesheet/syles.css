@@ -82,12 +82,22 @@ i:not(.header-container i) {
         background-color: var(--clr-violet);
         background-image: url(/images/bg-mobile.svg);
         background-repeat: no-repeat;
-        background-position-y: -18%;
-
+        background-position-y: -5%;
         background-size: 100%;
         font-family: var(--ff-poppins);
         color: var(--clr-whit);
         font-size: 0.9rem;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+
+    footer a {
+        color: inherit !important;
     }
 
     /* Outter containers */
@@ -104,7 +114,7 @@ i:not(.header-container i) {
         margin-left: 1rem;
         display: flex;
         width: 33%;
-        height: 10vh;
+        height: 9vh;
         align-items: center;
         padding: 0.3rem;
     }
@@ -112,41 +122,85 @@ i:not(.header-container i) {
     .illustration-container {
         align-self: center;
         width: 90%;
-        height: 40vh;
+        height: 45vh;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         margin-left: 0.5rem;
+        margin-top: 2vh;
     }
 
     .content-container {
+        margin-top: 3vh;
         align-self: center;
         width: 75%;
         height: 40vh;
-        outline: 1px solid;
         align-items: center;
     }
 
     .social-container {
         align-self:center;
-        width: 30%;
+        width: 33%;
         height: 5vh;
         display: flex;
         justify-content: space-around;
     }
 
-    footer {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        color: white;
+
+    /* header stlyes */
+
+    .header-container h3 {
+        font-family: var(--ff-open-sans);
+        font-size: 1.5rem;
+        position: relative;
+        left: 0.5rem;
+        letter-spacing: 0.1rem;
+        font-weight: bolder;
+    }
+   
+    .header-container i {
+        font-size: 1.5rem;
     }
 
-    footer a {
-        color: inherit !important;
+
+    /* Illustration styles */
+
+    .illustration-container figure {
+        width: 100%;
+        height: auto;
     }
 
+    .illustration-container figure img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
 
+    /* content styles */
+
+    .content-container h2 {
+        letter-spacing: -0.05rem;
+        font-size: 1.5rem;
+    }
+
+    .content-container button {
+        margin-top: 2vh;
+        width: 70%;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding: 0.5rem;
+        color: var(--clr-violet);
+        box-shadow: 1px 1px 1px 0px #00000078;
+    }
+
+    /* social styles */
+
+    .social-container {
+        margin-top: 5vh;
+    }
 }
 
 
