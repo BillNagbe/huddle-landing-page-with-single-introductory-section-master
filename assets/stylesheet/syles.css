@@ -66,6 +66,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     color: white;
+    height: fit-content;
 }
 
 footer a {
@@ -193,8 +194,8 @@ footer a {
     }
 
     .content-container button {
-        margin-top: 2vh;
-        width: 70%;
+        margin-top: 3vh;
+        width: 100%;
         border-radius: 25px;
         border: none;
         outline: none;
@@ -255,11 +256,38 @@ footer a {
 
     .illustration-container {
         width: 40%;
-        height: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
 
     .content-container {
         width: 40%;
+        height: 30%;
+        outline: 1px solid;
+    }
+
+    .content-container button {
+        margin-top: 3vh;
+        margin-left: 1vw;
+        width: 60%;
+        align-self: flex-start;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding: 0.5rem;
+        color: var(--clr-violet);
+        box-shadow: 1px 1px 1px 0px #00000078;
+    }
+
+    .social-container {
+        width: 30%;
+        align-self: flex-end;
+        height: 5vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        margin-bottom: 2vh;
     }
 
 }
