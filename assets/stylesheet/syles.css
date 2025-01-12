@@ -25,269 +25,166 @@
 /* General / utilities styles*/
 
 
+@media screen and (max-width: 375px) {
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.flex-column-evenly {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.flex-column-around {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.flex-column-between {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.center {
-    text-align: center;
-}
-
-i:not(.header-container i) {
-    outline: 1px solid;
-    border-radius: 50%;
-    padding: 0.4rem;
-    font-size: 0.9rem;
-}
-
-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-    height: fit-content;
-}
-
-footer a {
-    color: inherit !important;
-}
-
-
-
-
-
-
-/* attribution */
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
-
-
-
-/* Small screens */
-
-@media screen and (max-width: 375px){
     body {
         min-height: var(--height);
         min-width: var(--width);
         background-color: var(--clr-violet);
         background-image: url(/images/bg-mobile.svg);
         background-repeat: no-repeat;
-        background-position-y: -5%;
+        /* background-attachment: fixed; */
         background-size: 100%;
+        background-position: top;
         font-family: var(--ff-poppins);
         color: var(--clr-whit);
         font-size: 0.9rem;
-    }
-
-    /* Outter containers */
-
-    .main-container {
-        padding: 1rem;
-        width: var(--width);
-        height: fit-content;
-        align-items: center;
-    }
-
-    .header-container {
-        align-self: flex-start;
-        margin-left: 1rem;
         display: flex;
-        width: 33%;
-        height: 9vh;
-        align-items: center;
-        padding: 0.3rem;
+        flex-direction: column;
+        gap: 1rem;
     }
-
+    
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 95vh;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .header-container {
+        display: flex;
+        gap: 0.25rem;
+        height: 10vh;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+    
+    
+    
     .flex-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-shrink: 1;
+        flex-grow: 3;
+    }
+    
+    
+    .illustration-container {
+        margin-top: 3vh;
+    }
+    
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+        height: 35vh;
+    }
+    
+    .content-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-container button {
+        width: 80%;
+        border-radius: 25px;
+        border: none;
+        color: var(--clr-violet);
+        padding: 0.5rem;
+        box-shadow: 1px 1px 1px 1px #0000007e;
+        margin-top: 2vh;
+    }
+    
+    
+    .social-container {
+        align-self: center;
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 2.5vh;
+    }
+    
+    .social-container i {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        outline: 1px solid;
+        border-radius: 50%;
+    }
+    
+    
+    
+    
+    footer {
+        height: 5vh;
+    }
+    
+    footer a {
+        color: inherit !important;
+    }
+    
+    
+    
+}
+
+@media screen and (min-width: 376px) and (max-width: 1440px) {
+
+    body {
+        background-image: url(/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position-y: 10%;
+        min-height: var(--height);
+        width: var(--width);
+        background-color: var(--clr-violet);
+        color: var(--clr-whit);
+        font-family: var(--ff-open-sans);
         display: flex;
         flex-direction: column;
     }
 
-
-    .illustration-container {
-        align-self: center;
-        width: 90%;
-        height: 45vh;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-left: 0.5rem;
-        margin-top: 2vh;
-    }
-
-    .content-container {
-        margin-top: 3vh;
-        align-self: center;
-        width: 75%;
-        height: 40vh;
-        align-items: center;
-    }
-
-    .social-container {
-        align-self:center;
-        width: 33%;
-        height: 5vh;
-        display: flex;
-        justify-content: space-around;
-    }
-
-
-    /* header stlyes */
-
-    .header-container h3 {
-        font-family: var(--ff-open-sans);
-        font-size: 1.5rem;
-        position: relative;
-        left: 0.5rem;
-        letter-spacing: 0.1rem;
-        font-weight: bolder;
-    }
-   
-    .header-container i {
-        font-size: 1.5rem;
-    }
-
-
-    /* Illustration styles */
-
-    .illustration-container figure {
-        width: 100%;
-        height: auto;
-    }
-
-    .illustration-container figure img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    /* content styles */
-
-    .content-container h2 {
-        letter-spacing: -0.05rem;
-        font-size: 1.5rem;
-    }
-
-    .content-container button {
-        margin-top: 3vh;
-        width: 100%;
-        border-radius: 25px;
-        border: none;
-        outline: none;
-        padding: 0.5rem;
-        color: var(--clr-violet);
-        box-shadow: 1px 1px 1px 0px #00000078;
-    }
-
-    /* social styles */
-
-    .social-container {
-        margin-top: 5vh;
-    }
-}
-
-
-/* Large screens  */
-@media screen and (min-width: 376px) and (max-width: 1440px){
-
-    body {
-        background-image: url("/images/bg-desktop.svg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: var(--clr-violet);
-        min-height: var(--height);
-        width: var(--width);
-        color: var(--clr-whit);
-    }
-
     .main-container {
-        height: 95vh;
-        width: var(--width);
-        align-self: center;
-        gap: 1rem;
+        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
     }
 
     .header-container {
-        width: 50%;
-        height: 10vh;
-        margin: 2vh 10%;
         display: flex;
-        gap: 0.5rem;
+        height: 10vh;
         align-items: center;
-    }
-
-    .header-container i, .header-container h3 {
-        font-size: clamp(1.5rem, 2.5rem, 7rem);
+        width: 75%;
+        outline: 1px solid;
+        margin: 0 auto;
+        gap: 0.5rem;
+        font-size: clamp(1.5rem, 2.5rem, 3rem);   
     }
 
     .flex-center {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-        width: 100%; 
-        height: 70vh;
-        flex-grow: 1;
-    }
-
-    .illustration-container {
-        width: 40%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .content-container {
-        width: 40%;
-        height: 30%;
+        justify-content: center;
+        gap: 2rem;
         outline: 1px solid;
-    }
-
-    .content-container button {
-        margin-top: 3vh;
-        margin-left: 1vw;
-        width: 60%;
-        align-self: flex-start;
-        border-radius: 25px;
-        border: none;
-        outline: none;
-        padding: 0.5rem;
-        color: var(--clr-violet);
-        box-shadow: 1px 1px 1px 0px #00000078;
+        padding: 5rem;
+        height: 80vh;
+        margin: 0 auto;
     }
 
     .social-container {
-        width: 30%;
         align-self: flex-end;
+        outline: 1px solid;
         height: 5vh;
         display: flex;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        margin-bottom: 2vh;
+        gap: 1rem;
+    }
+
+    .social-container i {
+        outline: 1px solid;
     }
 
 }
